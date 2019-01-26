@@ -46,11 +46,11 @@ Per il significato di sotto e sopra e destro sinistro fare riferimento all'immag
 | 3      | Arancio | Sopra dx |
 | 4      | Giallo  | Sotto dx |
 
-![](Photos\IMG_20181124_100515.jpg)
+![](Photos/IMG_20181124_100515.jpg)
 
 
 
-![](Photos\IMG_20181124_100122.jpg)
+![](Photos/IMG_20181124_100122.jpg)
 
 # Sequenza montaggio
 

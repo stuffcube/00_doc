@@ -55,11 +55,11 @@ Se rete non è presente o non è stata ancora impostata il led blu sull’ESP la
 
 Questa rete è aperta, non è necessario user name e password. Una volta collegati avviate un browser che andrà automaticamente alla pagina di configurazione, nel caso non funzione andate all’indirizzo 192.168.4.1
 
-​    ![](Photos\wifiManager_1.png)               
+​    ![](Photos/wifiManager_1.png)               
 
 Scegliendo “Configure WiFi” si ottiene la lista delle reti, selezionatene una, inserite la password e fate Save. Al riavvio si connetterà alla rete scelta.
 
- ![](Photos\wifiManager_2.png)
+ ![](Photos/wifiManager_2.png)
 
    
 

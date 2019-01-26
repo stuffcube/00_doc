@@ -10,7 +10,7 @@ Una volta montata ARI V3 occorre configurarla per fargli conoscere come è il su
 Lo *Sviluppo della ruota* in mm, la sua circonferenza che è pari a 3.14 volte il diametro.
 I *ppr* (Pulses Per Revolution) degli encoder. Il numero di tacche che ha il disco dell’encoder.
 
-![carreggiata](Photos\carreggiata.png)
+![carreggiata](Photos/carreggiata.png)
 
 Con questi valori si ricavano i parametri del robot.
 
@@ -22,7 +22,7 @@ Con questi valori si ricavano i parametri del robot.
 Calcolati questi numeri tramite la CLI[[1\]](#_ftn1) li configuro su ARI V3. 
 Scritto il comando lo si invia con *InviaCmd*.
 
-![](Photos\cli.png)
+![](Photos/cli.png)
 
 ## I comandi
 

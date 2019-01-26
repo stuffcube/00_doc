@@ -1,3 +1,5 @@
+[TOC]
+
 # Impostazioni e taratura
 
 ## configurazione
@@ -118,23 +120,16 @@ Muove diritta? Proseguo e salvare i dati
 
  
 
-Ex: EEprom.  Esegue operazioni su dei parametri di taratura. Vedi procedura DataEEprom. 
+Ex: EEprom.  Esegue operazioni su dei parametri di taratura. Vedi procedura DataEEprom.
 
- 
+```
+E0 SCRIVI i parametri in E2prom,
+E1 LEGGI i parametri in E2prom,
+E2 rispristina in valori di DEFAULT,
+E3 attiva e mostra i parametri CORRENTI,
+```
 
-​    E0 SCRIVI i parametri in E2prom,            
 
-​    E1 LEGGI i parametri in E2prom,             
-
-​    E2 rispristina in valori di DEFAULT,            
-
-​    E3 attiva e mostra i parametri CORRENTI,             
-
- 
-
- 
-
- 
 
  
 

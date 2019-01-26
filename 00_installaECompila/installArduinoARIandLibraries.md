@@ -14,13 +14,13 @@
 
  Avviare Arduino IDE, in file/preferences inserire in additional Board manager inserire   “<http://arduino.esp8266.com/stable/package_esp8266com_index.json>”
 
- 
 
-![](pictures\01_arduinoPreferences.png)
+
+![](pictures/01_arduinoPreferences.png)
 
  Aprire Arduino IDE tools/Boards/Board manager e cercare esp8266, installare.
 
-![](pictures\02_addESP_Board.png)
+![](pictures/02_addESP_Board.png)
 
 ## Install libraries
 
@@ -30,19 +30,19 @@ Da Arduino IDE Sketch/include library/ manage library
 
 Si collega alla rete e cerca le librerie disponibili. In “filter your search” mettere le librerie indicate sotto.
 
- ![](pictures\03_arduinoLibaryManager.png)
+ ![](pictures/03_arduinoLibaryManager.png)
 
  
 
- ![](pictures\04_tfmini.png)
+ ![](pictures/04_tfmini.png)
 
-![](pictures\05_ls303.png)
+![](pictures/05_ls303.png)
 
-![](pictures\06_unifiedSensor.png)
+![](pictures/06_unifiedSensor.png)
 
-![](pictures\07_IrRemoteESP8266.png)
+![](pictures/07_IrRemoteESP8266.png)
 
-![](pictures\08_VL53l0x.png)
+![](pictures/08_VL53l0x.png)
 
  Quella del drive motori e del wifiManager si ottengono da
 
@@ -52,7 +52,7 @@ Si collega alla rete e cerca le librerie disponibili. In “filter your search�
 
  selezionare l’opzione *download .zip* da Arduino IDE sketch/include library/ add zip library
 
- ![](pictures\09_drv8833.png)
+ ![](pictures/09_drv8833.png)
 
   
 
@@ -78,11 +78,11 @@ da riga di commando eseguire
 
 `git clone --recursive https://github.com/stuffcube/ARI_V3.git`” 
 
- ![](pictures\10_install_git.png)
+ ![](pictures/10_install_git.png)
 
 Al termine del processo sotto “00_testGit“ si avrà la seguente struttura.
 
-![](pictures\11_folderStructure.png)
+![](pictures/11_folderStructure.png)
 
 ## Compilare
 
@@ -98,11 +98,11 @@ Al termine del processo sotto “00_testGit“ si avrà la seguente struttura.
 
  Il cambio board è mostrato nelle figure successive.
 
- ![](pictures\12_arduinoCompile.png)
+ ![](pictures/12_arduinoCompile.png)
 
  Nella riga di stato inferiore sinistra appare la scheda selezionata.
 
-![](pictures\13_arduinoCompile.png) 
+![](pictures/13_arduinoCompile.png) 
 
   
 
@@ -117,7 +117,7 @@ Al termine del processo sotto “00_testGit“ si avrà la seguente struttura.
 
  Per accedere alla porta di programmazione del WeMos è necessario aprire la scatola. Modificare il suo firmware è un evento più raro. Se è già stato programmato al momento potete tralasciare la sua programmazione.
 
- ![](pictures\14_terminal.png)
+ ![](pictures/14_terminal.png)
 
  
 

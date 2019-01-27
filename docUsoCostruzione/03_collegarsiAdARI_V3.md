@@ -42,6 +42,14 @@ il 3.6 va sostituito dalla versione di python installata sul proprio computer, p
 
  
 
+##  Configurazione software
+
+lanciare il programma ad Arianna spenta, dopo qualche secondo si aprirà una pagina web con le seguenti opzioni
+
+ ​    ![](Photos/start1.png)               
+
+in alto indica il nome di Arianna che equivale alla configurazione che verrà usata (all'inizio vale 'default')
+
  
 
  

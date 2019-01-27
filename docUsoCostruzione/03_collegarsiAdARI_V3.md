@@ -67,8 +67,6 @@ Riavviate il software e assicuratevi che la configurazione da voi scelta sia att
 Accendete Arianna se  la rete non è presente o non è stata ancora impostata il led blu sull’ESP lampeggia col periodo di un secondo (05 on, o5 off).
  L’eSP si configura come access point con il nome ESP.. seguito dal suo numero di serie, collegatevi a questa rete.
 
-**Accendete arianna**
-
 Nel menu di scelta andate su "ARIANNA CONF RETE".
 
 

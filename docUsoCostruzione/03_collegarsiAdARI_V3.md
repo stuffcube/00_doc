@@ -44,30 +44,42 @@ il 3.6 va sostituito dalla versione di python installata sul proprio computer, p
 
 ##  Configurazione software
 
-lanciare il programma ad Arianna spenta, dopo qualche secondo si aprirà una pagina web con le seguenti opzioni
+ARI_V3\01_pcSoftware\arianna_cli_socket2.0
 
- ​    ![](Photos/start1.png)               
+Avviare Python e aprire il programma “arianna_clisocket.py”  con Arianna spenta, dopo qualche secondo si aprirà una pagina web con le seguenti opzioni
 
-in alto indica il nome di Arianna che equivale alla configurazione che verrà usata (all'inizio vale 'default')
+ ​    ![](Photos/start1.PNG)               
 
+in alto indica il nome di Arianna che equivale alla configurazione che verrà usata (all'inizio vale 'default').
+
+Aprire ora il link descritto come "nuova configurazione" e inserire i parametri fisici di arianna. Se non avete gia salvato i parametri di configurazione qui potete inserirli altrimenti è necessario inserire solo quelli identificati da asterisco (per le porte tcp e udp si raccomanda di usare 81 e 8888 se non ci sono esigenze particolari)
+
+ ​    ![](Photos/cfgadd.PNG)    
  
-
+ ricordate di inserire un nome alla configurazione, dopo aver premuto su invia tornate sul tab di scelta e andate all'opzione
+ "gestione configurazioni" 
  
+  ​    ![](Photos/sceltaconf.PNG)  
+  da qui potete correggere eventuali errori, duplicare configurazioni per testare parametri diversi o eliminari configurazioni non più utili, ma soprattutto potete scegliere dal menu in alto la configurazione da rendere attiva.
+  
+Riavviate il software e assicuratevi che la configurazione da voi scelta sia attiva.
 
-## Wifi setting
+Accendete Arianna se  la rete non è presente o non è stata ancora impostata il led blu sull’ESP lampeggia col periodo di un secondo (05 on, o5 off).
+ L’eSP si configura come access point con il nome ESP.. seguito dal suo numero di serie, collegatevi a questa rete.
 
- 
 
-Se rete non è presente o non è stata ancora impostata il led blu sull’ESP lampeggia col periodo di un secondo (05 on, o5 off).
- L’eSP si configura come access point con il nome ESP.. seguito dal suo numero di serie.
+Nel menu di scelta, accendete arianna,  andate su "ARIANNA CONF RETE".
 
-Questa rete è aperta, non è necessario user name e password. Una volta collegati avviate un browser che andrà automaticamente alla pagina di configurazione, nel caso non funzione andate all’indirizzo 192.168.4.1
 
 ​    ![](Photos/wifiManager_1.png)               
 
-Scegliendo “Configure WiFi” si ottiene la lista delle reti, selezionatene una, inserite la password e fate Save. Al riavvio si connetterà alla rete scelta.
+Scegliendo “Configure WiFi” si ottiene la lista delle reti, selezionatene una, inserite la password  inserite il nome della caonfigurazione salvata ai passi precenti e come porta udp la stessa della configurazione
+fate Save. Al riavvio si connetterà alla rete scelta.
 
  ![](Photos/wifiManager_2.png)
+ (rivedere immagine)
+ 
+ Collegatevi alla stessa rete impostata su arianna e dal menu web scegliete "CONTROLLI ARIANNA" si aprirà quindi la finestra con i possibili comandi da inviare ad Arianna
 
    
 
@@ -78,16 +90,6 @@ Scegliendo “Configure WiFi” si ottiene la lista delle reti, selezionatene un
 
  
 
-# Collegamento da pc
 
- 
-
-ARI_V3\01_pcSoftware\arianna_cli_socket2.0
-
-Avviare Python e aprire il programma “arianna_clisocket.py” 
-
-Appare la CLI.
-
-GUI: da browser inserire l’indirizzo <http://127.0.0.1:8081/ui2>
 
  

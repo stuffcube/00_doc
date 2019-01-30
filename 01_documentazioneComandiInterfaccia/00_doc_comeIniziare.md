@@ -119,11 +119,7 @@ percorro la parete, arrivo al fondo. mi giro e la ripercorro in senso contrario.
 
 come nella sentinella cambiando però la distanza dalla parete ad ogni percorrenza. Modificare la distanza poco alla volta per evitare perdite di orientamento. La distanza può essere cambiata durante la marcia.
 
-#### 
 
- 
-
- 
 
 # Elenco comandi
 
@@ -131,42 +127,43 @@ come nella sentinella cambiando però la distanza dalla parete ad ogni percorren
 
 le scitture vogliono un "3" iniziale e un argomento, esempio 3A90.
 
-###### Axxx: Alfa. assegna alfa 
+#### Axxx: Alfa. assegna alfa 
 
 Alfa. assegna Alfa, la direzione del robot. xxx è l'angolo in radianti, es 3.14. La direzione zero è definita all'accensione del robot. E' la direzione in avanti. Coincide con l'asse x.
 Alfa è positivo in senso antiorario.
 
-###### Cxxx: assegna raggio di sterzo
+#### Cxxx: assegna raggio di sterzo
 
 assegna "raggiorSterzo" in [m]. La variabile è usata nella movimento R2, stabilisce il raggio della circonferenza su cui ruota il robot.
 
-###### Dxxx: distanza da percorrere
+#### Dxxx: distanza da percorrere
 Distance. La distanza che viene percorsa nel prossimo Run espressa in [mm]. La distanza è sempre incrementale. 
 
-###### Ex: EEprom
+#### Ex: EEprom
 EEprom.  Esegue operazioni su dei parametri di taratura. Vedi procedura DataEEprom. 
 
 ​E0 SCRIVI i parametri in E2prom,            
 ​E1 LEGGI i parametri in E2prom,             
 ​E2 rispristina in valori di DEFAULT,            
 ​E3 mostra i parametri CORRENTI,             
-​E4 carica i valori di DEFAULT per il modello ARI02,             
-​E5 carica i valori di DEFAULT per il modello ARI03, 
 
 
-###### Fnxxx: impostazione dei parametri meccanici del robot
+
+#### Fnxxx: impostazione dei parametri meccanici del robot
 imposta dei parametri del robot. "n" indica quale parametro, "xxx" è il valore. 
 
 ​F0xx ED             
 ​F1xx ED_BASE            
 ​F2xx BASELINE       mm
 ​F3xx GIRO_RUOTA     mm  = sviluppo ruota[mm]/(4*ppr)
+F4xx Divisore lidar
+F5xx offest servo Pan [°]
 
 ​N.B. questi valori vanno attivati con un 3E3
 
  
 
-###### Gxxx: Guide mode
+#### Gxxx: Guide mode
 "Guide Mode". definisce il modo di guida nel run "R4". Il teta di feedback, tetaMisura, può provenire dall'odometria, dalla bussola, o altri mix possibili.
 Nel codice sotto teta è l'angolo ricavato dagli encoder. Il modo zero si affida alle misure fatte dagli encoder. Il modo 1 e 3 ricavano il teta direttamente dalla bussola. Nel modo 3 anche le posizioni x e y  sono calcolate dal teta della bussola.con il modo 2 è possibile imporre l'angolo corrente come angolo zero. Altrimenti la direzione è    assoluta come determinata dalla bussola.
 
@@ -188,19 +185,19 @@ Nel codice sotto teta è l'angolo ricavato dagli encoder. Il modo zero si affida
 	ypos    +=  deltaC*sin(teta);                   
 }` 
 
-###### Knxx:   assegnazione dei guadagni dei regolatori
+#### Knxx:   assegnazione dei guadagni dei regolatori
 K0 kpTeta   il guadagno proporzionale kp usato nel modo Run 4
 ​K1 kiTeta
 ​K2 kp_guida il guadagno proporzionale kp usato nel modo Run 1 e 3 (sensore di distanza laterale)
 ​K3 kd_guida il guadagno derivativo    kd usato nel modo Run 1 e 3 (sensore di distanza laterale)
 
-###### H0: Homing
+#### H0: Homing
 Homing, assegna lo posizione corrente (x, y, teta) = (0, 0, 0) 
 
-###### Lx: accende puntatore
+#### Lx: accende puntatore
 Led. puntatore a Led acceso, x=1, o spento x=0.
 
-###### Mx: monitor dati
+#### Mx: monitor dati
 Monitor. Attiva, 1, o disattiva, 0, l'invio continuo di misure da parte del robot. le msiure sono inviate nella routine "updatePosition" ogni 100 ms. La stringa ha l'header "mon:"
 
 `if (monitorDati && (counter >=4) ){`
@@ -231,7 +228,7 @@ Monitor. Attiva, 1, o disattiva, 0, l'invio continuo di misure da parte del robo
 
  
 
-###### Nnxxx:  assegna i coefficienti di correzione della bussola.
+#### Nnxxx:  assegna i coefficienti di correzione della bussola.
 
 coefficienti di correzione bussola. 
 
@@ -241,17 +238,17 @@ coefficienti di correzione bussola.
 
  
 
-###### Onxx:  impostazione distanze di riferimento   
+#### Onxx:  impostazione distanze di riferimento   
 
 ​        **O0**: distRef      	[cm]. riferimento per guida a distanza fissa nei modi R1 e R2
 ​        **O1**: distOstacolo 	[cm]. distanza minima sotto la quale ARI si arresta
 
-###### Pxxx:   movimento Pan
+#### Pxxx:   movimento Pan
 
 orienta il servo PAN della testa. xxx è in gradi, 90° guarda in avanti, 0 a sinistra e 180 a destra.
 In alcuni casi, a seconda del servo usato, è bene limitare l'escursione ad esempio tra 10 e 170°.
 
-###### Rx:     Run. 
+#### Rx:     Run. 
 
 Definisce in che modo effettuare la corsa "Run". Il run è definito con un obbiettivo (target).        Il raggiungimento del target termina il run.
 
@@ -273,7 +270,7 @@ Definisce in che modo effettuare la corsa "Run". Il run è definito con un obbie
 
  
 
-###### Sxxx:   Scorrimento tra le ruote
+#### Sxxx:   Scorrimento tra le ruote
 
 Imposta la variabile "raggioDiSterzo". Questa è un numero tra -1 e 1. 
 Zero significa scorrimento nullo, cioè le due ruote hanno la stessa velocità comandata.
@@ -284,16 +281,16 @@ Zero significa scorrimento nullo, cioè le due ruote hanno la stessa velocità c
 ​		VA = motorSpeed*(1-s)           
 ​		*VB = motorSpeed*(1+s)       
 
-###### Txxx:   Tilt
+#### Txxx:   Tilt
 
 orienta il servo TILT della testa. xxx è in gradi, 90° guarda in avanti, 0 a sinistra e 180 a destra.
 In alcuni casi, a seconda del servo usato, è bene limitare l'escursione ad esempio tra 10 e 170°.
 
-###### Vxxx:   Velocità. 
+#### Vxxx:   Velocità. 
 
 Definisce la velocità del robot. é il valore assegnato al PWM.  Valori tra 0 e 255.   
 
-###### Zxxx:   limite allo scorrimento
+#### Zxxx:   limite allo scorrimento
 
 definisce MAX_S. è il limite dello scorrimento (positivo e negativo) applicabile dal controllo.
 
@@ -303,11 +300,11 @@ definisce MAX_S. è il limite dello scorrimento (positivo e negativo) applicabil
 
 le letture vogliono un "1" iniziale, esempio 1m
 
-##### m: richiede distanze lette da sensore frontale e lidar
+#### m: richiede distanze lette da sensore frontale e lidar
 
 la risposta è m:distanzaSensoreFrontale;distanzaLidar. il sensore frontale ritorna 999 se non rileva nulla. il lidar nello stesso caso ritorna -1 
 
-###### p: stato del robot
+#### p: stato del robot
 
 ritorna una stringa separata da ";" con i seguenti campi
 
@@ -322,7 +319,7 @@ ritorna una stringa separata da ";" con i seguenti campi
 				String(raggiorSterzo) 	+";"+\
 				String(errore)			+";"+\
 				String(vl53dist);//	    +";"+\
-###### r: ritorna lo stato di Run del robot
+#### r: ritorna lo stato di Run del robot
 
 0: fermo
 x: tipo di run comandato (es 4 a seguito di un R4)

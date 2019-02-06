@@ -34,7 +34,9 @@ il primo numero (Y) indica l’azione. 3 significa scrittura, 1 lettura.
 n e il carattere opzionale m indica(no) quale azione fare, nell’esempio sotto F1 significa scrivi ED_BASE i caratteri successivi contengono l’argomento del comando, di norma il valore.
 Ad ogni comando inviato viene ritornata una risposta “leggibile”. ad esempio se invio “3F11” mi viene ritornato “F1_ED_BASE: 1.000000”
 
-Il comando è il seguente:
+di seguito vediamo i comandi per configurare i parametri meccanici e quelli per salvarli il EEprom
+
+### comandi di impostazione parametri meccanici e salvataggio dati
 
 Fnxxx: imposta dei parametri del robot. "n" indica quale parametro, "xxx" è il valore. 
 
@@ -45,39 +47,40 @@ Fnxxx: imposta dei parametri del robot. "n" indica quale parametro, "xxx" è il 
 
 N.B. questi valori vanno attivati con un 3E3
 
- 
-
-Esempio:
+**Esempio**:
 
 carreggiata = 220 mm
  diametro ruota = 50 mm
  ppr = 20
 
- 
+sviluppo ruota = 3.14*50 = 157 mm*
+*Giro Ruota = sviluppo ruota[mm]/(4*ppr) = 157/(4*20) = 1.9625 mm
 
-sviluppo ruota = 3.14*50 = 157 mm
-
-Giro Ruota = sviluppo ruota[mm]/(4*ppr) = 157/(4*20) = 1.9625 mm
-
- 
-
-Comandi da inviare:
+### salva Leggi dati da EEprom
 
 E2                          carica i valori di default.
- E3                          attiva i valori
- E0                          salva i valori in E2prom
+E3                          attiva i valori
+E0                          salva i valori in E2prom
 
-I valori di default sono quelli sotto riportati.
 
- dovendo modificare i valori sotto sono riportati i singoli comandi.
 
-ED                         = 1          inviare                  **F01**. **N.B. 0 è “zero” non “O” maiuscolo** ED_BASE                = 1          inviare                  **F11** 
- BASELINE               = 220     inviare                  **F2220** 
- GIRO_RUOTA       =1.9625 inviare                   **F31.9625** 
+## configurazione iniziale
 
-inviare E3 per attivare i valori. La risposta conterrà la lista dei parametri attiva. Questo parametro serve anche per mostrare i parametri in uso.
+alla prima accensione del robot seguire la seguente procedura:
 
-E0 per salvarli nella EEprom[[1\]](#_ftn1) di ARI V3. Cosi facendo verranno ricaricati ad ogni accensione.
+3E2                          carica i valori di default.
+3E3                          attiva i valori
+3E0                          salva i valori in E2prom
+
+dovendo modificare i valori sotto sono riportati i singoli comandi.
+
+3ED                         = 1          inviare                  **F01**. **N.B. 0 è “zero” non “O” maiuscolo** ED_BASE                = 1          inviare                  **3F11** 
+ BASELINE               = 220     inviare                  **3F2220** 
+ GIRO_RUOTA       =1.9625 inviare                   **3F31.9625** 
+
+inviare 3E3 per attivare i valori. La risposta conterrà la lista dei parametri attiva. Questo parametro serve anche per mostrare i parametri in uso.
+
+3E0 per salvarli nella EEprom[[1\]](#_ftn1) di ARI V3. Cosi facendo verranno ricaricati ad ogni accensione.
 
 # Verifica dei dati.
 

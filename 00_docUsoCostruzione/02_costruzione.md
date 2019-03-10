@@ -30,6 +30,21 @@
 
 
 
+| CN_I2C_EXP |                     |      |
+| ---------- | ------------------- | ---- |
+| 1          | SCL (pin 21 ATmega) |      |
+| 3          | SDA (pin 20 ATmega) |      |
+| 5          | gnd                 |      |
+| 7          | n.c                 |      |
+| 2          | 3V3                 |      |
+| 4          | 5V                  |      |
+| 6          | n.c                 |      |
+| 8          | n.c                 |      |
+
+
+
+# 
+
 # Collegamento motori
 
 Per il significato di sotto e sopra e destro sinistro fare riferimento all'immagine di montaggio. 
